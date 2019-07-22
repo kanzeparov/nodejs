@@ -28,14 +28,14 @@ class ClientMQTT {
 
     topic_handler (topic, message) {
       console.log("Received a new message from %o", topic.toString())
-      let json_msg = JSON.parse(message)
-      var msg_type = topic.split('/')[3]
+      //let json_msg = JSON.parse(message)
+      var msg_type = topic.split('/')[2]
       if (msg_type == 'power' || msg_type == 'current' || msg_type == 'voltage') {
         var power_value = {
             // For example, enodeX
-            node: topic.split('/')[1],
+            node: message, //topic.split('/')[1],
             // For ex, portX
-            port: topic.split('/')[2],
+            port: 0, //topic.split('/')[2],
             // power
             value: json_msg.value
         }
@@ -47,6 +47,7 @@ class ClientMQTT {
       this.started = 1
       console.log("Connected to the broker!")
       this.Client.subscribe("testbed/+/+/power")
+      this.Client.subscribe("/testbed/+/+")
       this.Client.on('message', this.topic_handler.bind(this))
     }
 
