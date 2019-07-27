@@ -43,12 +43,22 @@ class ClientMQTT {
       }
     }
 
+    publish77 (enode, value) {
+      console.log("publich77 is hooked")
+      let topic = "testbed/enode" + String(enode) + "/relay/ac/mode"
+      let payload = {
+        value: value,
+        timeStamp: Math.round(new Date() / 1000)
+      }
+      this.Client.publish(topci, JSON.stringify(payload))
+    }
+
     connected () {
       this.started = 1
       console.log("Connected to the broker!")
       this.Client.subscribe("testbed/+/+/power")
       this.Client.subscribe("/testbed/+/+")
-      this.Client.on('message', this.topic_handler.bind(this))
+      this.Client.on('message', this.topic_handler.bind(this)) 
     }
 
     add_handler (handler) {
