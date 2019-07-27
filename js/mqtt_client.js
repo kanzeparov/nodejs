@@ -44,13 +44,23 @@ class ClientMQTT {
     }
 
     publish77 (enode, value) {
-      console.log("publich77 is hooked")
+      console.log("publish77 is hooked")
       let topic = "testbed/enode" + String(enode) + "/relay/ac/mode"
       let payload = {
         value: value,
         timeStamp: Math.round(new Date() / 1000)
       }
-      this.Client.publish(topci, JSON.stringify(payload))
+      this.Client.publish(topic, JSON.stringify(payload))
+    }
+
+    publish73 (enode, value) {
+      console.log("publish73 is hooked")
+      let topic = "testbed/enode" + String(enode) + "/relay/der/mode"
+      let payload = {
+        value: value,
+        timeStamp: Math.round(new Date() / 1000)
+      }
+      this.Client.publish(topic, JSON.stringify(payload))
     }
 
     connected () {
