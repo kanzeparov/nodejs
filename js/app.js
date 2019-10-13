@@ -15,13 +15,14 @@ let timeDelete = 30;
 //var admin = require("firebase-admin");
 
 var firebaseConfig = {
-  apiKey: "AIzaSyCalxvSjI6Op_WLR4PNOb02zVvXyCpg_wE",
-  authDomain: "onder2.firebaseapp.com",
-  databaseURL: "https://onder2.firebaseio.com",
-  projectId: "onder2",
+  apiKey: "AIzaSyCqS2bWFtRXX2P4wq5nD0PANaFXsPr6FLw",
+  authDomain: "onder3-f45a2.firebaseapp.com",
+  databaseURL: "https://onder3-f45a2.firebaseio.com",
+  projectId: "onder3-f45a2",
   storageBucket: "",
-  messagingSenderId: "1017048097094",
-  appId: "1:1017048097094:web:39cd1d4029ffe5f3"
+  messagingSenderId: "1081599581797",
+  appId: "1:1081599581797:web:a5c728edae6f8db9b3b08c",
+  measurementId: "G-PKRKBWJT99"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);

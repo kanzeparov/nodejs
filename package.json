@@ -14,11 +14,11 @@
     "eslint-plugin-promise": "^3.6.0",
     "express": "*",
     "express-ws": "*",
-    "firebase": "^6.3.1",
-    "firebase-admin": "~7.1.1",
-"firebase-functions": "^2.2.1",
+    "firebase": "^6.6.2",
+    "firebase-admin": "^7.1.1",
+    "firebase-functions": "^2.3.1",
     "mqtt": "^3.0.0",
     "nodemon": "*",
-    "sqlite3": "*"
+    "sqlite3": "^4.1.0"
   }
 }
